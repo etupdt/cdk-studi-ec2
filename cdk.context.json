@@ -1,0 +1,91 @@
+{
+  "vpc-provider:account=498746666064:filter.isDefault=false:filter.vpc-id=vpc-04bb33e351626c8ba:region=eu-west-3:returnAsymmetricSubnets=true": {
+    "vpcId": "vpc-04bb33e351626c8ba",
+    "vpcCidrBlock": "172.30.0.0/16",
+    "ownerAccountId": "498746666064",
+    "availabilityZones": [],
+    "subnetGroups": [
+      {
+        "name": "Public",
+        "type": "Public",
+        "subnets": [
+          {
+            "subnetId": "subnet-00d0ade4005700635",
+            "cidr": "172.30.0.0/24",
+            "availabilityZone": "eu-west-3a",
+            "routeTableId": "rtb-028c578340c5b8fe0"
+          },
+          {
+            "subnetId": "subnet-08be49830467d9687",
+            "cidr": "172.30.1.0/24",
+            "availabilityZone": "eu-west-3b",
+            "routeTableId": "rtb-028c578340c5b8fe0"
+          },
+          {
+            "subnetId": "subnet-0f961cb92c93b0b94",
+            "cidr": "172.30.2.0/24",
+            "availabilityZone": "eu-west-3c",
+            "routeTableId": "rtb-028c578340c5b8fe0"
+          }
+        ]
+      }
+    ]
+  },
+  "availability-zones:account=498746666064:region=eu-west-3": [
+    "eu-west-3a",
+    "eu-west-3b",
+    "eu-west-3c"
+  ],
+  "vpc-provider:account=498746666064:filter.isDefault=false:filter.tag:Name=CdkStudiRdsStack/studi-vpc:region=eu-west-3:returnAsymmetricSubnets=true": {
+    "vpcId": "vpc-0562770eb23b3ae0c",
+    "vpcCidrBlock": "172.30.0.0/16",
+    "ownerAccountId": "498746666064",
+    "availabilityZones": [],
+    "subnetGroups": [
+      {
+        "name": "Private",
+        "type": "Private",
+        "subnets": [
+          {
+            "subnetId": "subnet-07fb32b1a2ad39126",
+            "cidr": "172.30.128.0/18",
+            "availabilityZone": "eu-west-3a",
+            "routeTableId": "rtb-03729fa76adef259c"
+          },
+          {
+            "subnetId": "subnet-0b5a2f9eedeba94de",
+            "cidr": "172.30.192.0/18",
+            "availabilityZone": "eu-west-3b",
+            "routeTableId": "rtb-0c1bfbcdb5cd180d3"
+          }
+        ]
+      },
+      {
+        "name": "Public",
+        "type": "Public",
+        "subnets": [
+          {
+            "subnetId": "subnet-093f8b32ae2c95415",
+            "cidr": "172.30.0.0/18",
+            "availabilityZone": "eu-west-3a",
+            "routeTableId": "rtb-0a471dfb747f1a0bf"
+          },
+          {
+            "subnetId": "subnet-008505c2ab9914d26",
+            "cidr": "172.30.64.0/18",
+            "availabilityZone": "eu-west-3b",
+            "routeTableId": "rtb-02557a2b51cde86d6"
+          }
+        ]
+      }
+    ]
+  },
+  "security-group:account=498746666064:region=eu-west-3:securityGroupName=studi-ec2-security-group-cdk:vpcId=vpc-0562770eb23b3ae0c": {
+    "securityGroupId": "sg-05d3b4cd4430a362f",
+    "allowAllOutbound": false
+  },
+  "security-group:account=498746666064:region=eu-west-3:securityGroupName=studi-ec2-rds-security-group-cdk:vpcId=vpc-0562770eb23b3ae0c": {
+    "securityGroupId": "sg-0ed3db157be9a9c67",
+    "allowAllOutbound": false
+  }
+}
